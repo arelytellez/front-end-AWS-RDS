@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Registros</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Registros de la Base de Datos</h1>
+
+        <!-- Botón para mostrar todos los registros de la tabla 'country' -->
+        <button id="fetchRecords" class="btn btn-primary">Mostrar Todos los Registros (Country)</button>
+
+        <!-- Campo de entrada para buscar un solo registro por código en 'country' -->
+        <div class="mt-3">
+            <input type="text" id="countryCode" class="form-control" placeholder="Ingresa el código del país">
+            <button id="fetchRecord" class="btn btn-secondary mt-2">Buscar Registro (Country)</button>
+        </div>
+
+        <!-- Botón para mostrar todos los registros de la tabla 'city' -->
+        <button id="fetchRecordsCity" class="btn btn-primary mt-3">Mostrar Todos los Registros (City)</button>
+
+        <!-- Campo de entrada para buscar un solo registro por ID en 'city' -->
+        <div class="mt-3">
+            <input type="text" id="cityId" class="form-control" placeholder="Ingresa el ID de la ciudad">
+            <button id="fetchRecordCity" class="btn btn-secondary mt-2">Buscar Registro (City)</button>
+        </div>
+
+        <!-- Botón para mostrar todos los registros de la tabla 'countrylanguage' -->
+        <button id="fetchRecordsCountryLanguage" class="btn btn-primary mt-3">Mostrar Todos los Registros (CountryLanguage)</button>
+
+        <!-- Campo de entrada para buscar un solo registro por CountryCode y Language en 'countrylanguage' -->
+        <div class="mt-3">
+            <input type="text" id="countryLanguageCode" class="form-control" placeholder="Ingresa el código del país (CountryLanguage)">
+            <input type="text" id="language" class="form-control mt-2" placeholder="Ingresa el idioma">
+            <button id="fetchRecordCountryLanguage" class="btn btn-secondary mt-2">Buscar Registro (CountryLanguage)</button>
+        </div>
+
+        <!-- Área donde se mostrarán los registros -->
+        <div id="records" class="mt-4"></div>
+    </div>
+
+    <!-- Cargar archivo JS externo -->
+    <script src="main.js"></script>
+</body>
+</html>
